@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from .passwd import password
+from .passwd import SECRET_KEY as SK
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zmtluxf5)!b@)n!$q%*1hmpx@g353%-jlvyh(1u*--i%eif3##'
+SECRET_KEY = SK
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,7 +130,7 @@ CELERY_TASK_SERIALIZER = 'json'
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_HOST_USER = '53027569@qq.com'
-EMAIL_HOST_PASSWORD = 'bpkjnbbcvkqpcafc'
+EMAIL_HOST_PASSWORD = password
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
 EMAIL_PORT = 465
