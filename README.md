@@ -1,0 +1,2 @@
+# django_celery_redis_async_tasks
+使用django+celery+redis来执行异步任务
